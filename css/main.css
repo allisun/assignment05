@@ -1,0 +1,63 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+/*code from css-tricks, universal box sizing that includes pseudo elements*/
+/*https://css-tricks.com/box-sizing*/
+
+body{
+	margin:0 auto; /*to make every div centered*/
+	text-align:center; /*all text will be centered*/
+	font-family: Helvetica, arial, sans-serif;
+	font-size:100%;
+}
+
+#banner{
+	top:0; /*so it stays fixed on the top*/
+	position:fixed;
+	height:200px; /*the height where the main content div will start*/
+	width:100%;
+	z-index:10000; /*to stay in front*/
+	background-color: #000;
+	color:#fff;
+	font-family: "Courier New", Courier, monospace;
+}
+
+
+#nav_bar ul li{
+	display:block; /*makes the nav bar horizontal*/
+	text-decoration: none; /*no bullets*/
+	font-style:italic;
+}
+
+#nav_bar ul li a{
+	color:#F90404; /*red link text on black bg so it's always readable*/
+}
+
+#info{
+	margin-top:200px; /*depends on the height of the banner*/
+	background-color: #fff;
+	color:#000;
+	padding:2%;
+}
+
+img{
+	margin:0 auto;
+	padding:2%;
+	width:600px;
+}
+
+@media only screen and (max-width: 1200px) {
+    img {
+        max-width:500px;
+        min-width:300px;
+    }
+
+@media only screen and (max-width: 768px) {
+    img {
+        max-width:300px;
+        min-width:200px;
+    }
+@media only screen and (max-width: 480px) {
+    img {
+        display:none;
+    }
